@@ -41,7 +41,20 @@ Run the starter Python entry point with:
 python3 code/main.py
 ```
 
+The included implementation runs offline without a key, or as a hybrid agent with
+OpenAI or Gemini evidence extraction by setting the matching environment key. Its
+financial simulation and final checks stay deterministic in every mode. See
+[`code/README.md`](./code/README.md) for setup, free-tier testing, caching, and
+verification commands.
+
 After running your solution, confirm that `output.csv` exists in the repository root and contains the required columns and one row for every request.
+
+Evaluate the 25 public examples and run the test suite with:
+
+```bash
+python3 code/evaluation/main.py
+python3 -m unittest discover -s code/tests -v
+```
 
 ## Important File Locations
 
